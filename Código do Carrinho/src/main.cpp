@@ -19,7 +19,6 @@
 #include "Motores.h"
 #include "imagem.h"
 
-
 #define AMBOS 1    // Liga os dois leds
 #define DIREITA 2  // Liga os led direita
 #define ESQUERDA 3 // Liga os led esquerda
@@ -404,39 +403,6 @@ void loop()
   }
 
   joystick();
-
-switch (estadoAtual)
-{
-case NORMAL:
-  if (distancia <= 150)
-  {
-    Serial.println("Obstáculo detectado! Parando...");
-
-    pararCarrinho();      
-    tempoAcao = millis();
-    estadoAtual = PARANDO;
-  }
-  break;
-
-case PARANDO:
-  if (millis() - tempoAcao >= 1000) // espera 1s parado
-  {
-    Serial.println("Girando meia volta...");
-    motor.girar_direita(40);  // velocidade do giro
-    tempoAcao = millis();
-    estadoAtual = GIRANDO;
-  }
-  break;
-
-case GIRANDO:
-  if (millis() - tempoAcao >= 2300)  // TEMPO PARA MEIA VOLTA (ajuste fino)
-  {
-    Serial.println("Meia volta concluída!");
-    motor.parar();
-    estadoAtual = NORMAL;
-  }
-  break;
-}
 
   displayCarrinho();
 
