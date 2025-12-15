@@ -1,0 +1,1078 @@
+[
+    {
+        "id": "25ee9feb704afec1",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "850a8670e2ed3a82",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "9e4e0d71dd70ea5a",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#1c1e26",
+            "primary": "#3d65c2",
+            "bgPage": "#181f39",
+            "groupBg": "#4562a5",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "36104b714024d08b",
+        "type": "ui-page",
+        "name": " ",
+        "ui": "850a8670e2ed3a82",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9e4e0d71dd70ea5a",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "3da7f7101fe6be23",
+        "type": "ui-group",
+        "name": "𝐓𝐄𝐌𝐏𝐄𝐑𝐀𝐓𝐔𝐑𝐀 𝐃𝐄 𝐌𝐎𝐓𝐎𝐑𝐄𝐒",
+        "page": "36104b714024d08b",
+        "width": "8",
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "25145444a0770c8c",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "certificate.pem.crt",
+        "keyname": "private.pem.key",
+        "caname": "AmazonRootCA1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "766182c470ccfdaa",
+        "type": "mqtt-broker",
+        "name": "AWS",
+        "broker": "a11vg1gix21sy9-ats.iot.us-east-1.amazonaws.com",
+        "port": "8883",
+        "tls": "25145444a0770c8c",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fd784c2cb20627f1",
+        "type": "ui-group",
+        "name": "𝐍𝐎𝐌𝐄 𝐄 𝐒𝐄𝐍𝐇𝐀 (𝐎𝐁𝐑𝐈𝐆𝐀𝐓𝐎𝐑𝐈𝐎)",
+        "page": "36104b714024d08b",
+        "width": 12,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f7ab2aaeb6431faf",
+        "type": "ui-group",
+        "name": "𝐂𝐎𝐍𝐓𝐑𝐎𝐋𝐄",
+        "page": "36104b714024d08b",
+        "width": "4",
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "325af4818b041097",
+        "type": "mqtt in",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "topic": "carrinho/dados",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "766182c470ccfdaa",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "f72f4d5edaaeea5a",
+                "f356d51d7cf00a56",
+                "d6504de05242b9c3",
+                "a8a89c560fd3450d",
+                "9597572ba9a83966",
+                "ce0b8e58cac25f9d",
+                "e8fa303a33f48338"
+            ]
+        ]
+    },
+    {
+        "id": "1bb9712c2c28b9ff",
+        "type": "ui-switch",
+        "z": "25ee9feb704afec1",
+        "name": "Lanterna",
+        "label": "Lanternas",
+        "group": "f7ab2aaeb6431faf",
+        "order": 4,
+        "width": 2,
+        "height": "3",
+        "passthru": false,
+        "decouple": false,
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "mdi-lightbulb-on-outline",
+        "oncolor": "red",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "mdi-lightbulb-outline",
+        "offcolor": "gray",
+        "x": 680,
+        "y": 720,
+        "wires": [
+            [
+                "979732a24ffcec8e"
+            ]
+        ]
+    },
+    {
+        "id": "cd5ae4b3ca3d6ced",
+        "type": "ui-gauge",
+        "z": "25ee9feb704afec1",
+        "name": "Motor0",
+        "group": "3da7f7101fe6be23",
+        "order": 1,
+        "value": "payload.temperatura_Motor00",
+        "valueType": "msg",
+        "width": "4",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Frente Esquerda",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0008ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#0091ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#94e4ff",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 560,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f72f4d5edaaeea5a",
+        "type": "json",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "property": "payload.temperatura_Motor00",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "cd5ae4b3ca3d6ced"
+            ]
+        ]
+    },
+    {
+        "id": "20eb53dc19abe61d",
+        "type": "ui-gauge",
+        "z": "25ee9feb704afec1",
+        "name": "Motor1",
+        "group": "3da7f7101fe6be23",
+        "order": 2,
+        "value": "payload.temperatura_Motor01",
+        "valueType": "msg",
+        "width": "4",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Frente Direita",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0008ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#0091ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#94e4ff",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 560,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96bf2265d03b1ba4",
+        "type": "ui-gauge",
+        "z": "25ee9feb704afec1",
+        "name": "Motor2",
+        "group": "3da7f7101fe6be23",
+        "order": 3,
+        "value": "payload.temperatura_Motor02",
+        "valueType": "msg",
+        "width": "4",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Trás Esquerda",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0008ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#0091ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#94e4ff",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 560,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9ca673e80ab5832",
+        "type": "ui-gauge",
+        "z": "25ee9feb704afec1",
+        "name": "Motor3",
+        "group": "3da7f7101fe6be23",
+        "order": 4,
+        "value": "payload.temperatura_Motor03",
+        "valueType": "msg",
+        "width": "4",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Trás Direita",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0008ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#0091ff",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#94e4ff",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 560,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6504de05242b9c3",
+        "type": "json",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "property": "payload.temperatura_Motor02",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "96bf2265d03b1ba4"
+            ]
+        ]
+    },
+    {
+        "id": "f356d51d7cf00a56",
+        "type": "json",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "property": "payload.temperatura_Motor01",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 180,
+        "wires": [
+            [
+                "20eb53dc19abe61d"
+            ]
+        ]
+    },
+    {
+        "id": "a8a89c560fd3450d",
+        "type": "json",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "property": "payload.temperatura_Motor03",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "d9ca673e80ab5832"
+            ]
+        ]
+    },
+    {
+        "id": "9597572ba9a83966",
+        "type": "json",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "property": "payload.estado_Farol",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "ccab2411269ba20e"
+            ]
+        ]
+    },
+    {
+        "id": "ce0b8e58cac25f9d",
+        "type": "json",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "property": "payload.estado_Seta",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "6a66d4a5824c4040"
+            ]
+        ]
+    },
+    {
+        "id": "6a66d4a5824c4040",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Setas",
+        "func": "msg.payload = msg.payload.estado_Seta;\n\nif (msg.payload == \"true\")\n    msg.payload = true;\nelse\n    msg.payload = false;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 580,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/inject.svg"
+    },
+    {
+        "id": "ba749495a9d5f744",
+        "type": "ui-template",
+        "z": "25ee9feb704afec1",
+        "group": "",
+        "page": "",
+        "ui": "850a8670e2ed3a82",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <!-- Teleport the button to the #app-bar-actions area when mounted -->\n    <Teleport v-if=\"mounted\" to=\"#app-bar-title\">\n        <img height=\"80px\"src=\"https://i.imgur.com/ZUHgi0B.png\"></img>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n  data() {\n    return {\n      mounted: false\n    }\n  },\n  mounted() {\n    // Set mounted to true when the component is mounted\n    this.mounted = true\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:ui",
+        "className": "",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ccab2411269ba20e",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Farol",
+        "func": "msg.payload = msg.payload.estado_Farol;\n\nif(msg.payload == \"true\")\n    msg.payload = true;\nelse\n    msg.payload = false;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "icon": "font-awesome/fa-car"
+    },
+    {
+        "id": "3be424cc050cdb34",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Lanterna",
+        "func": "msg.payload = msg.payload.estado_Lanterna;\n\nif (msg.payload == \"true\")\n    msg.payload = true;\nelse\n    msg.payload = false;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 720,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/light.svg"
+    },
+    {
+        "id": "e8fa303a33f48338",
+        "type": "json",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "property": "payload.estado_Lanterna",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 720,
+        "wires": [
+            [
+                "3be424cc050cdb34"
+            ]
+        ]
+    },
+    {
+        "id": "c5ccdbae929d97da",
+        "type": "mqtt out",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "topic": "carrinho/dash",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "766182c470ccfdaa",
+        "x": 1720,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "979732a24ffcec8e",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Lanterna",
+        "func": "// Garante booleano puro\nconst estado = (msg.payload === true || msg.payload === \"true\");\n\nlet chave = \"estado_Lanterna_dash\";\n\nmsg.payload = {};\nmsg.payload.chave = chave;\nmsg.payload.valor = estado;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 720,
+        "wires": [
+            [
+                "56470b20b3cc11da"
+            ]
+        ],
+        "icon": "node-red/light.svg"
+    },
+    {
+        "id": "e9f8828f28b45d1a",
+        "type": "ui-text-input",
+        "z": "25ee9feb704afec1",
+        "group": "fd784c2cb20627f1",
+        "name": "envio de senha",
+        "label": "Senha",
+        "order": 2,
+        "width": 6,
+        "height": 0,
+        "topic": "payload",
+        "topicType": "msg",
+        "mode": "number",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": true,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 580,
+        "y": 1040,
+        "wires": [
+            [
+                "c727a5693f39a75d"
+            ]
+        ]
+    },
+    {
+        "id": "56470b20b3cc11da",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Comando",
+        "func": "let senha = global.get(\"senha\") || \"\";\nlet nome = global.get(\"nome\") || \"\";\n\nlet chave = msg.payload.chave;\nlet valor = msg.payload.valor;\n\n// cria o objeto base\nlet payload = {\n    senha: senha,\n    nome: nome\n};\n\n    payload[chave] = valor;\n\n\nmsg.payload = payload;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 720,
+        "wires": [
+            [
+                "55e79de03cc87582"
+            ]
+        ]
+    },
+    {
+        "id": "87bd7f50b6e694c4",
+        "type": "ui-text-input",
+        "z": "25ee9feb704afec1",
+        "group": "fd784c2cb20627f1",
+        "name": "envio de nome",
+        "label": "Nome",
+        "order": 1,
+        "width": 6,
+        "height": 0,
+        "topic": "payload",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 580,
+        "y": 1080,
+        "wires": [
+            [
+                "4e1fa434052182dd"
+            ]
+        ]
+    },
+    {
+        "id": "c727a5693f39a75d",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Senha",
+        "func": "global.set(\"senha\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e1fa434052182dd",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Nome",
+        "func": "global.set(\"nome\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55e79de03cc87582",
+        "type": "json",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1530,
+        "y": 720,
+        "wires": [
+            [
+                "c5ccdbae929d97da",
+                "3157845cf36bc723"
+            ]
+        ]
+    },
+    {
+        "id": "3157845cf36bc723",
+        "type": "debug",
+        "z": "25ee9feb704afec1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1720,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "1d55dfc37cf908f6",
+        "type": "ui-switch",
+        "z": "25ee9feb704afec1",
+        "name": "Seta D",
+        "label": "Seta Direita",
+        "group": "f7ab2aaeb6431faf",
+        "order": 2,
+        "width": 2,
+        "height": "3",
+        "passthru": false,
+        "decouple": false,
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "mdi-lightbulb-on-outline",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "mdi-lightbulb-outline",
+        "offcolor": "gray",
+        "x": 650,
+        "y": 620,
+        "wires": [
+            [
+                "971b7a630b62a086"
+            ]
+        ]
+    },
+    {
+        "id": "971b7a630b62a086",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Seta D",
+        "func": "// Garante booleano puro\nconst estado = (msg.payload === true || msg.payload === \"true\");\n\nlet chave = \"estado_seta_dir_dash\";\n\nmsg.payload = {};\nmsg.payload.chave = chave;\nmsg.payload.valor = estado;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 620,
+        "wires": [
+            [
+                "56470b20b3cc11da"
+            ]
+        ],
+        "icon": "node-red/light.svg"
+    },
+    {
+        "id": "e8a6d224a8f3bb6e",
+        "type": "ui-switch",
+        "z": "25ee9feb704afec1",
+        "name": "Seta E",
+        "label": "Seta Esquerda",
+        "group": "f7ab2aaeb6431faf",
+        "order": 1,
+        "width": 2,
+        "height": "3",
+        "passthru": false,
+        "decouple": false,
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "mdi-lightbulb-on-outline",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "mdi-lightbulb-outline",
+        "offcolor": "gray",
+        "x": 650,
+        "y": 540,
+        "wires": [
+            [
+                "de5399dff0e6ab9c"
+            ]
+        ]
+    },
+    {
+        "id": "de5399dff0e6ab9c",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Seta E",
+        "func": "// Garante booleano puro\nconst estado = (msg.payload === true || msg.payload === \"true\");\n\nlet chave = \"estado_seta_esq_dash\";\n\nmsg.payload = {};\nmsg.payload.chave = chave;\nmsg.payload.valor = estado;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 540,
+        "wires": [
+            [
+                "56470b20b3cc11da"
+            ]
+        ],
+        "icon": "node-red/light.svg"
+    },
+    {
+        "id": "ef5ff1b718ba87c0",
+        "type": "ui-switch",
+        "z": "25ee9feb704afec1",
+        "name": "Farol",
+        "label": "Farois",
+        "group": "f7ab2aaeb6431faf",
+        "order": 3,
+        "width": 2,
+        "height": "3",
+        "passthru": false,
+        "decouple": false,
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "mdi-lightbulb-on-outline",
+        "oncolor": "white",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "mdi-lightbulb-outline",
+        "offcolor": "gray",
+        "x": 650,
+        "y": 440,
+        "wires": [
+            [
+                "6b80a3da49813e10"
+            ]
+        ]
+    },
+    {
+        "id": "6b80a3da49813e10",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "Farol",
+        "func": "// Garante booleano puro\nconst estado = (msg.payload === true);\n\nlet chave = \"estado_farois_dash\";\n\nmsg.payload = {};\nmsg.payload.chave = chave;\nmsg.payload.valor = estado;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 440,
+        "wires": [
+            [
+                "56470b20b3cc11da"
+            ]
+        ],
+        "icon": "node-red/light.svg"
+    },
+    {
+        "id": "051e0b14070c043b",
+        "type": "mqtt in",
+        "z": "25ee9feb704afec1",
+        "name": "",
+        "topic": "carrinho/dash",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "766182c470ccfdaa",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 880,
+        "wires": [
+            [
+                "f68a76bf6cd04f1e"
+            ]
+        ]
+    },
+    {
+        "id": "f68a76bf6cd04f1e",
+        "type": "function",
+        "z": "25ee9feb704afec1",
+        "name": "function 1",
+        "func": "let estado = msg.payload.estado_acesso;\n\n// sempre limpa o payload para evitar [object Object]\nmsg.payload = \"\";\n\nif (estado === true || estado === \"true\") {\n    msg.ui_control = { hide: true };   // Esconde os campos\n} else {\n    msg.ui_control = { hide: false };  // Mostra os campos\n}\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 880,
+        "wires": [
+            [
+                "95a49742d51067d5"
+            ]
+        ]
+    },
+    {
+        "id": "95a49742d51067d5",
+        "type": "ui-notification",
+        "z": "25ee9feb704afec1",
+        "ui": "850a8670e2ed3a82",
+        "position": "top right",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Outro usuário está ultilizando 🧐",
+        "allowConfirm": false,
+        "confirmText": "Acesso acessado!!!!!!!!",
+        "raw": true,
+        "className": "",
+        "name": "",
+        "x": 530,
+        "y": 960,
+        "wires": [
+            [
+                "e9f8828f28b45d1a",
+                "87bd7f50b6e694c4"
+            ]
+        ]
+    },
+    {
+        "id": "443740f71991e54e",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.29.0"
+        }
+    }
+]
