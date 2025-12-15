@@ -346,16 +346,16 @@ void loop()
     return;
   }
 
-  // FILTRO para estabilidade
-  static int distanciaFiltrada = 1000;
+  // // FILTRO para estabilidade
+  // static int distanciaFiltrada = 1000;
 
-  // Se leitura muito baixa, considera SEM obstáculo
-  if (leitura < 120)
-    leitura = 2000; // longe
+  // // Se leitura muito baixa, considera SEM obstáculo
+  // if (leitura < 120)
+  //   leitura = 2000; // longe
 
-  // filtro
-  distanciaFiltrada = 0.7 * distanciaFiltrada + 0.3 * leitura;
-  distancia = distanciaFiltrada;
+  // // filtro
+  // distanciaFiltrada = 0.7 * distanciaFiltrada + 0.3 * leitura;
+  // distancia = distanciaFiltrada;
 
   Encoder_boot.update();
 
@@ -398,11 +398,10 @@ void loop()
     carrinho.seguirLinhaStep(kp, ki, kd, vyPercent);
     // carrinho.tick(estadoTick);
 
-    if (distancia < 150)
-      pararCarrinho();
+    // if (distancia < 150)
+    //   pararCarrinho();
   }
 
-  Serial.printf("distancia = %d\n", distancia);
   joystick();
 
 switch (estadoAtual)
